@@ -9,15 +9,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.demo.victim;
 import com.example.demo.vrepo;
 
 
 @Controller
-public class controller  extends HttpServlet{
+public class controller implements ErrorController{
+	private final static String PATH = "/error";
+    @Override
+    @RequestMapping(PATH)
+    @ResponseBody
+    public String getErrorPath() {
+        // TODO Auto-generated method stub
+        return "No Mapping Found";
+    }
 	
 	@Autowired
 	vrepo repo;
