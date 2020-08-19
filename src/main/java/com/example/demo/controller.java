@@ -15,8 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class controller  extends HttpServlet{
+	
 	@Autowired
 	vrepo repo;
+	
 	
 @RequestMapping("selfcare")
 public String selfcare()
