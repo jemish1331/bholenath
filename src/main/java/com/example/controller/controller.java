@@ -38,7 +38,7 @@ public class controller extends HttpServlet implements ErrorController{
 @RequestMapping("/")
 public String selfcare()
 {
-	return "Mainpage.jsp" ;
+	return "Firstpage.jsp" ;
 }
 @RequestMapping("/signup")
 public String signup()
