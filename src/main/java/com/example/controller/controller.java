@@ -20,7 +20,8 @@ import com.example.demo.vrepo;
 
 
 @Controller
-public class controller implements ErrorController{
+
+public class controller extends HttpServlet implements ErrorController{
 	private final static String PATH = "/error";
     @Override
     @RequestMapping(PATH)
